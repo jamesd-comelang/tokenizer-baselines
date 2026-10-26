@@ -60,9 +60,10 @@ gcc -O2 -DSQLITE_PRIVATE= bench.c ~/workspace/co_SQLite/tools/sqlite3.c -o bench
 Verified 2026-10-26: prints
 `C: 2530480 tokens, typesum=285119860 lensum=7962360 (20 passes, 4000 lines)`.
 
-Go:
+Go (run from inside `go/`; it has no go.mod, so module mode
+must be off):
 ```
-~/sdk/go/bin/go build -o bench_go .
+GO111MODULE=off ~/sdk/go/bin/go build -o bench_go .
 ./bench_go
 ```
 
